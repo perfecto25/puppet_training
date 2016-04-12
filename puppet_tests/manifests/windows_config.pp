@@ -55,7 +55,7 @@ if $::operatingsystem == 'windows' {
     #  exitcode => [0, 3010, 194],
     #}
 
-    # dism { 'IIS-WebServer':
+    #dism { 'IIS-WebServer':
     #  ensure  => present,
     #  require => Dism['IIS-WebServerRole'],
     #  exitcode => [0, 3010, 194],
@@ -64,6 +64,7 @@ if $::operatingsystem == 'windows' {
     package { '7zip':
       ensure    => installed,
       provider  => 'chocolatey',
+      # install_options => ['-installArgs', '"', '/RESTART', '"'],
       # source    => 'https://
     }
 
